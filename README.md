@@ -1,4 +1,4 @@
-<h1 align="center"> Personal Portfolio Website <br>
+<h1 align="center"> My Personal Portfolio Website <br>
 <a href="https://skriyaz.netlify.app/" target="_blank"></a></h1>
 
 This repository contains the code for my personal portfolio website, showcasing my skills, projects, and experiences in computer science and engineering. The website features a modern design, interactive elements, and responsive layouts for seamless viewing on different devices. Explore my work and background through this professional online platform.
