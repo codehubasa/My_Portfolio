@@ -1,13 +1,13 @@
 <h1 align="center">  Personal Portfolio Website <br>
 <a href="https://skriyaz.netlify.app/" target="_blank"></a></h1>
 
-This repository contains the code for my personal portfolio website, showcasing my skills, projects, and experiences in computer science and engineering. The website features a modern design, interactive elements, and responsive layouts for seamless viewing on different devices. Explore my work and background through this professional online platform.
+This repository contains the code for my personal portfolio website, showcasing my skills, projects, and experiences in Information Technology. The website features a modern design, interactive elements, and responsive layouts for seamless viewing on different devices. Explore my work and background through this professional online platform.
 <div align="center">
 </div>
 
 [![BuiltWithLove](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://skriyaz.netlify.app/)
 
-<img width="1875" height="830" alt="Portfolio-ss" src="https://github.com/user-attachments/assets/ead5179b-038d-4975-a209-696fc2c4a21d" />
+<img width="1873" height="852" alt="image" src="https://github.com/user-attachments/assets/23e46660-829d-499b-9a2e-a141aa082dbb" />
 
  ---
  <img width="1722" height="817" alt="Screenshot 2026-05-01 232144" src="https://github.com/user-attachments/assets/2cabd33f-5db7-4097-88f3-48d0abb77b8d" />
