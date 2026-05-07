@@ -15,7 +15,7 @@ This repository contains the code for my personal portfolio website, showcasing 
 
 ## Tech Stack ⚙
 
-This project has been developed using the following technologies.
+This project has been developed using the following technologies:-
 - HTML5
 - CSS
 - Node.js
