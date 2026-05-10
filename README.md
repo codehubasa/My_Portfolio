@@ -7,10 +7,6 @@ This repository contains the code for my personal portfolio website, showcasing 
 
 [![BuiltWithLove](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://skriyaz.netlify.app/)
 
-<img width="1873" height="852" alt="image" src="https://github.com/user-attachments/assets/23e46660-829d-499b-9a2e-a141aa082dbb" />
-
- ---
- <img width="1722" height="817" alt="Screenshot 2026-05-01 232144" src="https://github.com/user-attachments/assets/2cabd33f-5db7-4097-88f3-48d0abb77b8d" />
 
 
 ## Tech Stack ⚙
