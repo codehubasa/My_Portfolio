@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements & Certifications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-yellow: #ffc107;
+            --text-dark: #1a1a1a;
+            --bg-light: #f5f5f5;
+            --three-d-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 50px 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-container {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: slideUpFade 0.8s ease-out forwards;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .header-main i {
+            font-size: 2.8rem;
+            color: #000;
+        }
+
+        .header-main span {
+            color: var(--primary-yellow);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 60px;
+            column-gap: 30px;
+        }
+
+        .cert-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--three-d-shadow);
+            position: relative;
+            aspect-ratio: 1.5 / 1;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: slideUpFade 0.7s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .cert-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .cert-overlay {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.25));
+            padding-bottom: 40px;
+        }
+
+        .read-more-btn {
+            background-color: var(--primary-yellow);
+            color: var(--text-dark);
+            border: none;
+            padding: 9px 22px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 0px #d4a004;
+            transition: all 0.2s ease;
+            text-transform: capitalize;
+        }
+
+        .read-more-btn:hover {
+            background-color: #ffca2c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0px #d4a004;
+        }
+
+        @media (max-width: 900px) {
+            .cert-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="container">
+        <div class="header-container">
+            <div class="header-main">
+                <i class="fas fa-medal"></i>
+                <div>Achievements & <span>Certifications</span></div>
+            </div>
+        </div>
+        <div class="cert-grid" id="cert-container"></div>
+    </section>
+
+    <script>
+        // 1. PREVIEW IMAGES
+        const previewImages = [
+            "certs/eduskill-ss.png", // Box 1 Image
+            "certs/TSEC-ss.png",     // Box 2 Image[cite: 1]
+            "certs/EY-ss.png", // Box 3 Image
+            "certs/Hackazards-ss.png", // Box 4 Image
+            "certs/Adobe-ss.png", // Box 5 Image
+            "certs/Wadhwani-ss.png", // Box 6 Image
+            "certs/Tata-ss.png", // Box 7 Image
+            "certs/AWS-ss.png", // Box 8 Image
+            "certs/ACM-ss.png", // Box 9 Image
+            "certs/Metamorph-ss.png", // Box 10 Image
+            "certs/Trithon-ss.png", // Box 11 Image
+            "certs/AWS (Summit)-ss.png", // Box 12 Image 
+        ];
+
+        // 2. FULL CERTIFICATE LINKS
+        const fullCertificates = [
+            "certs/test.pdf", // Box 1 PDF
+            "certs/TSEC.pdf", // Box 2 PDF[cite: 1]
+            "certs/EY.pdf", //Box 3 PDF
+            "certs/Hackazards.pdf", // Box 4 PDF
+            "certs/Adobe.pdf", // Box 5 PDF
+            "certs/Wadhwani.pdf", // Box 6 PDF
+            "certs/Tata.pdf", // Box 7 PDF
+            "certs/AWS.pdf", // Box 8 PDF
+            "certs/ACM.pdf", // Box 9 PDF
+            "certs/Metamorph.pdf", // Box 10 PDF
+            "certs/Trithon.pdf", // Box 11 PDF
+            "certs/AWS (Summit).pdf", // Box 12 PDF
+            "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"
+        ];
+
+        // 3. DISPLAY TITLES
+        const titles = [
+            "Eduskill",
+            "Tata Social Enterprise", // Box 2 Title[cite: 1]
+            "EY", //Box 3 Title
+            "Hackazards", // Box 4 Title
+            "Adobe", // Box 5 Title
+            "Wadhwani", // Box 6 Title
+            "Tata", // Box 7 Title
+            "AWS", // Box 8 Title
+            "ACM", // Box 9 Title
+            "Metamorph", // Box 10 Title
+            "Trithon", // Box 11 Title
+            "Google", "Java", "EY", "Workshop", "SQL", "Cyber", "ML", "Azure", "React"
+        ];
+
+        const container = document.getElementById('cert-container');
+
+        for (let i = 0; i < 12; i++) {
+            const card = document.createElement('div');
+            card.className = 'cert-card';
+            card.style.animationDelay = `${(i * 0.1) + 0.2}s`;
+
+            card.innerHTML = `
+            <img src="${previewImages[i]}" alt="${titles[i]}" class="cert-img">
+            <div class="cert-overlay">
+                <a href="${fullCertificates[i]}" target="_blank" class="read-more-btn">Read More</a>
+            </div>
+        `;
+            container.appendChild(card);
+        }
+    </script>
+
+</body>
+
+</html>

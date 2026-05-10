@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    /* Fixed background hex */
+
+    /* --- ANIMATION KEYFRAMES --- */
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .projects {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .title-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+
+    .brain-logo {
+      width: 65px;
+      height: 65px;
+      fill: #333;
+    }
+
+    .projects-title {
+      font-size: 54px;
+      font-weight: 800;
+      color: #f4b400;
+      line-height: 1;
+    }
+
+    /* Added span color for the 'S' as per your previous request */
+    .projects-title span {
+      color: #000000;
+    }
+
+    .projects-desc {
+      max-width: 950px;
+      margin: auto;
+      font-size: 18px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 60px;
+    }
+
+    /* --- FIXED CAROUSEL STRUCTURE --- */
+    .carousel {
+      width: 1050px;
+      margin: auto;
+      position: relative;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      width: 100%;
+      padding: 40px 10px;
+    }
+
+    .track {
+      display: flex;
+      gap: 30px;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* --- CARD DESIGN --- */
+    .card {
+      width: 320px;
+      height: 540px;
+      background: #fff;
+      border-radius: 35px;
+      overflow: hidden;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border: 2px solid #e2e8f0;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+      animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+        box-shadow 0.5s ease,
+        border-color 0.5s ease;
+    }
+
+    .card:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .card:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .card:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .card:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+
+    .card:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1);
+      box-shadow: 0 0 35px rgba(244, 180, 0, 0.25);
+      border-color: #facc15;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 50%;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content {
+      width: 100%;
+      height: 50%;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .card h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+
+    .card p {
+      font-size: 13.5px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .btn {
+      background: #facc15;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 11.5px;
+      font-weight: 800;
+      width: 140px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      border: 2px solid #facc15;
+    }
+
+    .btn:hover {
+      background: #000;
+      color: #fff;
+      border-color: #000;
+      transform: translateY(-2px);
+    }
+
+    /* --- FIXED ARROWS --- */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 45px;
+      color: #333;
+      cursor: pointer;
+      z-index: 1000;
+      user-select: none;
+      transition: color 0.3s ease, scale 0.2s ease;
+    }
+
+    .arrow:hover {
+      color: #f4b400;
+      scale: 1.2;
+    }
+
+    .left {
+      left: -70px;
+    }
+
+    .right {
+      right: -70px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="projects">
+    <div class="title-wrapper">
+      <h1 class="projects-title">PROJECT<span>S</span></h1>
+    </div>
+
+    <p class="projects-desc">
+      My journey is told through code—where every project serves as a chapter in my transition from mastering theory to
+      crafting solutions.
+    </p>
+
+    <div class="carousel">
+      <div class="arrow left" onclick="moveSlide(-1)">&#10094;</div>
+
+      <div class="carousel-container">
+        <div class="track" id="track">
+
+          <div class="card">
+            <div class="card-img">
+              <img src="./Home-ss.png" alt="Home Screenshot">
+            </div>
+            <div class="content">
+              <div>
+                <h3>Portfolio</h3>
+                <p>I have built a Portfolio website using HTML, CSS and JavaScript. I always keep updating it.</p>
+              </div>
+              <div class="btn-group">
+                <a href="#" target="_blank" class="btn">View/Demo</a>
+                <a href="https://github.com/codehubasa/My_Portfolio" target="_blank" class="btn">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="./Florafix-ss.png" alt="FloraFix">
+            </div>
+            <div class="content">
+              <div>
+                <h3>FloraFix</h3>
+                <p>A dual-purpose ecosystem managing Ayurvedic commerce data and a custom-built AI diagnostic tool for
+                  identifying plant diseases.</p>
+              </div>
+              <div class="btn-group">
+                <a href="https://florafix-websi.onrender.com/" target="_blank" class="btn">View/Demo</a>
+                <a href="https://github.com/codehubasa/FloraFix" target="_blank" class="btn">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="./SmartLab-ss.png" alt="Smart Labs">
+            </div>
+            <div class="content">
+              <div>
+                <h3>Smart Labs</h3>
+                <p>Managed data for a smart laboratory management system, including equipment tracking and resource
+                  allocation.</p>
+              </div>
+              <div class="btn-group">
+                <a href="https://smartlabbooking.pythonanywhere.com/" target="_blank" class="btn">View/Demo</a>
+                <a href="https://github.com/codehubasa/Lab_Equipment_Booking_System" target="_blank"
+                  class="btn">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="./Aurora-ss.png" alt="Aurora Portal">
+            </div>
+            <div class="content">
+              <div>
+                <h3>Aurora Portal</h3>
+                <p>Streamlined student application processes to improve financial aid accessibility and empower
+                  students.</p>
+              </div>
+              <div class="btn-group">
+                <a href="https://aurora-scholarship-portal.vercel.app/" target="_blank" class="btn">View/Demo</a>
+                <a href="https://github.com/codehubasa/Aurora-Scholarship-Portal" target="_blank"
+                  class="btn">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="./CureGen-ss.png" alt="CureGen">
+            </div>
+            <div class="content">
+              <div>
+                <h3>CureGen</h3>
+                <p>An advanced AI diagnostic suite leveraging deep learning to detect pathologies and provide risk
+                  assessments.</p>
+              </div>
+              <div class="btn-group">
+                <a href="#" class="btn">View/Demo</a>
+                <a href="https://github.com/codehubasa/Brain_Tumor_Detection" target="_blank" class="btn">Details</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="arrow right" onclick="moveSlide(1)">&#10095;</div>
+    </div>
+
+    <script>
+      const track = document.getElementById("track");
+      const cards = document.querySelectorAll(".card");
+      const totalCards = cards.length;
+
+      // Clone for infinite effect
+      for (let i = 0; i < 3; i++) {
+        let clone = cards[i].cloneNode(true);
+        track.appendChild(clone);
+      }
+
+      let index = 0;
+      const cardWidth = 320;
+      const gap = 30;
+      const scrollWidth = cardWidth + gap;
+
+      function moveSlide(dir) {
+        index += dir;
+        track.style.transition = "0.6s cubic-bezier(0.4, 0, 0.2, 1)";
+        track.style.transform = `translateX(-${index * scrollWidth}px)`;
+
+        // Logic for seamless wrap-around
+        if (index >= totalCards) {
+          setTimeout(() => {
+            track.style.transition = "none";
+            index = 0;
+            track.style.transform = `translateX(0px)`;
+          }, 600);
+        }
+
+        if (index < 0) {
+          setTimeout(() => {
+            track.style.transition = "none";
+            index = totalCards - 1;
+            track.style.transform = `translateX(-${index * scrollWidth}px)`;
+          }, 600);
+        }
+      }
+
+      let autoPlay = setInterval(() => moveSlide(1), 3500);
+      document.querySelector('.carousel').onmouseenter = () => clearInterval(autoPlay);
+      document.querySelector('.carousel').onmouseleave = () => autoPlay = setInterval(() => moveSlide(1), 3500);
+    </script>
+
+</body>
+
+</html>

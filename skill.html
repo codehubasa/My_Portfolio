@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Sora',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#f5f5f5,#eaeaea);
+}
+
+.skills{
+  padding:70px 100px;
+}
+
+.skills-title{
+  text-align:center;
+  font-size:42px;
+  font-weight:700;
+  margin-bottom:60px;
+}
+
+.skills-title span{
+  color:#eab308;
+}
+
+.skills-container{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px 40px;
+}
+
+/* CARD */
+.skill-card{
+  background:#1b1b2f;
+  color:white;
+  padding:18px 20px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  opacity:0;
+  transition:all 0.6s ease;
+}
+
+/* ENTRY */
+.from-left{ transform:translateX(-60px); }
+.from-right{ transform:translateX(60px); }
+
+.show{
+  opacity:1;
+  transform:translateX(0);
+}
+
+/* TOP */
+.skill-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:14px;
+}
+
+.skill-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* LOGO */
+.logo{
+  width:24px;
+}
+
+.logo img{
+  width:100%;
+}
+
+/* TEXT */
+.skill-name{
+  font-size:17px;
+  font-weight:600;
+}
+
+.skill-percent{
+  font-size:15px;
+  font-weight:600;
+}
+
+/* BAR */
+.bar{
+  width:100%;
+  height:10px;
+  background:#d1d5db;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.bar-fill{
+  height:100%;
+  width:0;
+  background:#facc15;
+  border-radius:10px;
+  transition:width 1s ease;
+}
+</style>
+</head>
+
+<body>
+
+<section class="skills">
+
+<h1 class="skills-title">
+  &lt;/&gt; Skills & <span>Abilities</span>
+</h1>
+
+<div class="skills-container">
+
+<div class="skill-card from-left">
+  <div class="skill-top">
+    <div class="skill-left">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
+      </div>
+      <span class="skill-name">Java</span>
+    </div>
+    <span class="skill-percent">95%</span>
+  </div>
+  <div class="bar"><div class="bar-fill"></div></div>
+</div>
+
+<div class="skill-card from-right">
+  <div class="skill-top">
+    <div class="skill-left">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png">
+      </div>
+      <span class="skill-name">Next JS</span>
+    </div>
+    <span class="skill-percent">60%</span>
+  </div>
+  <div class="bar"><div class="bar-fill"></div></div>
+</div>
+
+<div class="skill-card from-left">
+  <div class="skill-top">
+    <div class="skill-left">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png">
+      </div>
+      <span class="skill-name">C++</span>
+    </div>
+    <span class="skill-percent">75%</span>
+  </div>
+  <div class="bar"><div class="bar-fill"></div></div>
+</div>
+
+<div class="skill-card from-right">
+  <div class="skill-top">
+    <div class="skill-left">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png">
+      </div>
+      <span class="skill-name">Python</span>
+    </div>
+    <span class="skill-percent">90%</span>
+  </div>
+  <div class="bar"><div class="bar-fill"></div></div>
+</div>
+
+<div class="skill-card from-left">
+  <div class="skill-top">
+    <div class="skill-left">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968332.png">
+      </div>
+      <span class="skill-name">PHP</span>
+    </div>
+    <span class="skill-percent">65%</span>
+  </div>
+  <div class="bar"><div class="bar-fill"></div></div>
+</div>
+
+<div class="skill-card from-right">
+  <div class="skill-top">
+    <div class="skill-left">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png">
+      </div>
+      <span class="skill-name">MySQL</span>
+    </div>
+    <span class="skill-percent">75%</span>
+  </div>
+  <div class="bar"><div class="bar-fill"></div></div>
+</div>
+
+<div class="skill-card from-left">
+  <div class="skill-top">
+    <div class="skill-left">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png">
+      </div>
+      <span class="skill-name">C Language</span>
+    </div>
+    <span class="skill-percent">85%</span>
+  </div>
+  <div class="bar"><div class="bar-fill"></div></div>
+</div>
+
+<div class="skill-card from-right">
+  <div class="skill-top">
+    <div class="skill-left">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png">
+      </div>
+      <span class="skill-name">MongoDB</span>
+    </div>
+    <span class="skill-percent">80%</span>
+  </div>
+  <div class="bar"><div class="bar-fill"></div></div>
+</div>
+
+</div>
+
+</section>
+
+<script>
+window.addEventListener("load",()=>{
+  const cards = document.querySelectorAll(".skill-card");
+
+  cards.forEach((card,i)=>{
+    setTimeout(()=>{
+      card.classList.add("show");
+
+      // 🔥 SAFE PARSING FIX
+      let percentText = card.querySelector(".skill-percent").innerText.trim();
+      let percentValue = parseInt(percentText.replace("%",""));
+
+      card.querySelector(".bar-fill").style.width = percentValue + "%";
+
+    }, i*120);
+  });
+});
+</script>
+
+</body>
+</html>

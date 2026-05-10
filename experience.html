@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiences Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-yellow: #ffc107;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 60px 0;
+            overflow-x: hidden;
+        }
+
+        .experience-section {
+            max-width: 1150px; 
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        /* --- Animations --- */
+        @keyframes slideFromLeft {
+            from { opacity: 0; transform: translateX(-100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideFromRight {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .header-container {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .header-main span {
+            color: var(--primary-yellow);
+        }
+
+        .header-subtext {
+            color: var(--text-gray);
+            font-size: 1rem;
+            white-space: nowrap; 
+            margin: 0 auto;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px; 
+        }
+
+        .experience-card {
+            background: var(--bg-white);
+            border-radius: 15px;
+            padding: 38px 35px; 
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .card-left {
+            animation: slideFromLeft 1s ease-out forwards;
+        }
+
+        .card-right {
+            animation: slideFromRight 1s ease-out forwards;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 18px;
+            position: relative;
+        }
+
+        .timeline-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .icon-circle {
+            width: 42px;
+            height: 42px;
+            border: 2px dashed var(--primary-yellow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            z-index: 2;
+            color: var(--primary-yellow);
+            font-size: 1.05rem;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 42px;
+            bottom: -40px;
+            width: 2px;
+            border-left: 2px dashed var(--primary-yellow);
+            z-index: 1;
+        }
+
+        .timeline-item:last-child .timeline-line {
+            display: none;
+        }
+
+        .timeline-content {
+            padding-top: 4px;
+        }
+
+        .date-badge {
+            background-color: var(--primary-yellow);
+            color: #ffffff; /* White font as requested */
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700; /* Bolded font as requested */
+            display: inline-block;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .job-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .job-desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        @media (max-width: 1100px) {
+            .header-subtext {
+                white-space: normal;
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .experience-grid { grid-template-columns: 1fr; }
+            .card-left, .card-right { animation: slideFromLeft 1s ease-out forwards; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="experience-section">
+    <div class="header-container">
+        <div class="header-main">
+            <i class="fas fa-briefcase"></i>
+            <div>Experience<span>s</span></div>
+        </div>
+        <p class="header-subtext">
+            A transparent look at my professional journey, current certifications, and future learning roadmap.
+        </p>
+    </div>
+
+    <div class="experience-grid">
+        <!-- Left Column -->
+        <div class="experience-card card-left">
+            <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="icon-circle"><i class="fas fa-user-graduate"></i></div>
+                    <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-content">
+                    <div class="date-badge">JULY 2024 - OCT 2024</div>
+                    <div class="job-title">EMPLOYABILITY SKILLS TRAINING - Wadhwani Foundation</div>
+                    <p class="job-desc">Successfully completed the "Ignite India" program, focusing on 21st-century core competencies including problem-solving, digital literacy, and workplace communication.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="icon-circle"><i class="fab fa-python"></i></div>
+                    <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-content">
+                    <div class="date-badge">17 MAR 2026 - 2 APR 2026</div>
+                    <div class="job-title">BEYOND CURRICULUM TRAINING (BCT) - Python & Django</div>
+                    <p class="job-desc">Engaged in intensive industrial training focused on full-stack development. Mastered Django frameworks and Python scripting to bridge the gap between academic theory and industry requirements[cite: 1].</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="experience-card card-right">
+            <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="icon-circle"><i class="fab fa-java"></i></div>
+                    <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-content">
+                    <div class="date-badge">FEB 2026 - APRIL 2026</div>
+                    <div class="job-title">PROGRAMMING IN JAVA - NPTEL (IIT Kharagpur)</div>
+                    <p class="job-desc">Completed an intensive 12-week certification covering OOP principles, multithreading, and networking. Successfully appeared for the proctored exam on April 24, 2026.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="icon-circle"><i class="fas fa-rocket"></i></div>
+                    <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-content">
+                    <div class="date-badge">CURRENT - 2026 ROADMAP</div>
+                    <div class="job-title">ACTIVE LEARNING: OPEN SOURCE & CLOUD</div>
+                    <p class="job-desc">Currently identifying open-source projects for contribution and exploring Cloud infrastructure (AWS/Docker) to complement full-stack development skills and collaborative coding practices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
