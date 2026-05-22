@@ -16,7 +16,7 @@ This project has been developed using the following technologies:-
 - CSS
 - Node.js
 - Bootstrap
-- SASS
+  
 
 - ## Features 🎭
 
